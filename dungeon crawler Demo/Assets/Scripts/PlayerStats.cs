@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour {
-    public static PlayerHealth Instance;
+public class PlayerStats : MonoBehaviour {
+    public static PlayerStats Instance;
 
 
     [Tooltip("Below this percentage, the player will be considered injured")]
@@ -21,6 +21,21 @@ public class PlayerHealth : MonoBehaviour {
     private float RealCurrenthealth = 100;
     private float RealMaxhealth = 100;
     private float PercentageCurrentHealth;
+
+    public float vitality;
+    public float resilience;
+    public float willpower;
+    public float reflexes;
+
+    public float strength;
+    public float cunning;
+    public float acuity;
+    public float intelligence;
+
+    public float augery;
+    public float lockpicking;
+    public float smithing;
+    public float brewing;
 
 
 
