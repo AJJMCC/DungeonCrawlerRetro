@@ -86,13 +86,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1616895620228440}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.7049999, z: 0.007}
+  m_LocalRotation: {x: 0.08715578, y: 0, z: 0, w: 0.9961947}
+  m_LocalPosition: {x: 0, y: 0.7049999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4081075004564300}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10, y: 0, z: 0}
 --- !u!4 &4318583707838942
 Transform:
   m_ObjectHideFlags: 1
@@ -124,10 +124,10 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
+    y: 0.31
     width: 1
-    height: 1
-  near clip plane: 0.3
+    height: 0.55
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -135,16 +135,16 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: c2b6d61d143fc4c8cb3a857d39f83568, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
+  m_HDR: 0
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
+  m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
 --- !u!23 &23274286955964264
@@ -241,6 +241,18 @@ MonoBehaviour:
   LowHealthWarningPercentage: 0.3
   PhysRes: 0
   MagiRes: 0
+  vitality: 0
+  resilience: 0
+  willpower: 0
+  reflexes: 0
+  strength: 0
+  cunning: 0
+  acuity: 0
+  intelligence: 0
+  augery: 0
+  lockpicking: 0
+  smithing: 0
+  brewing: 0
 --- !u!114 &114582624558097648
 MonoBehaviour:
   m_ObjectHideFlags: 1

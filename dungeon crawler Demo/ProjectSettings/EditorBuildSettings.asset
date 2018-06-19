@@ -4,4 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/PH_Scenes/Script tests (go away)/Test_CharacterController.unity
+    guid: d26420078f8b8164d9b9fae5b10d0cf6
+  - enabled: 1
+    path: Assets/PH_Scenes/Test_MainMenu.unity
+    guid: c100a6fe971d7694db6314e9f5ec951a
+  m_configObjects: {}

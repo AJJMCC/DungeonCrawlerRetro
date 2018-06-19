@@ -10,17 +10,13 @@ public class PlayerStats : MonoBehaviour {
     public float FirstHealthWarningPerventage;
     [Tooltip("Below this percentage, the player will be considered at low health")]
     public float LowHealthWarningPercentage;
-
-
-    public float PhysRes;
-    public float MagiRes;
-    
-
-
+        
     private bool Alive;
-    private float RealCurrenthealth = 100;
-    private float RealMaxhealth = 100;
+    public float RealCurrenthealth = 100;
+    public float RealMaxhealth = 100;
     private float PercentageCurrentHealth;
+    public int CurrentSpells;
+    public int MaxSpells;
 
     public float vitality;
     public float resilience;
@@ -37,10 +33,13 @@ public class PlayerStats : MonoBehaviour {
     public float smithing;
     public float brewing;
 
+    public float PhysRes;
+    public float MagiRes;
+    public float CritRes;
 
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
         Instance = this;
 
@@ -91,5 +90,5 @@ public class PlayerStats : MonoBehaviour {
     void Died()
     {
         Debug.Log("We died");
-    }
+    }    
 }
