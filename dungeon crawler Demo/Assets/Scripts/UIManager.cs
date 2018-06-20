@@ -49,12 +49,14 @@ public class UIManager : MonoBehaviour
     private Camera mainCam;
 
     PlayerStats pStats;
+    CursorControl cControl;
 
     // Use this for initialization
     void Start()
     {
         mainCam = Camera.main;
         pStats = GameObject.FindObjectOfType<PlayerStats>();
+        cControl = GameObject.FindObjectOfType<CursorControl>();
     }
 
     // Update is called once per frame
@@ -72,7 +74,7 @@ public class UIManager : MonoBehaviour
         VolumeController();
     }
 
-    public void cameraWindow()
+    /*public void cameraWindow()
     {
         Rect camViewport = Camera.main.rect;
         Vector3 mousePos = Input.mousePosition;
@@ -82,7 +84,7 @@ public class UIManager : MonoBehaviour
         }
 
 
-    }
+    }*/
 
     public void closeMenus()
     {
@@ -115,20 +117,24 @@ public class UIManager : MonoBehaviour
     //stuff to do when the player selects the sword icon
     public void SelectedSword()
     {
+        cControl.WeaponActiveTime = true;
+        //cControl.WeaponActive();
         SelectSwordButton.GetComponent<Image>().color = DisabledColour;
         SelecthandButton.GetComponent<Image>().color = yes;
         SelectItemButton.GetComponent<Image>().color = yes;
-        SelectSpellButton.GetComponent<Image>().color = yes;
+        SelectSpellButton.GetComponent<Image>().color = yes;        
     }
 
 
     //stuff to do when the player selects the hand icon
     public void Selectedhand()
     {
+        cControl.HandActiveTime = true;
+        //cControl.InteractActive();        
         SelectItemButton.GetComponent<Image>().color = yes;
         SelectSwordButton.GetComponent<Image>().color = yes;
         SelecthandButton.GetComponent<Image>().color = DisabledColour;
-        SelectSpellButton.GetComponent<Image>().color = yes;
+        SelectSpellButton.GetComponent<Image>().color = yes;        
     }
 
 
@@ -194,6 +200,11 @@ public class UIManager : MonoBehaviour
     {        
         AudioListener.volume = volumeSlider.value;
         volumeNum.text = "" + volumeSlider.value;
+    }
+
+    public void invertY()
+    {
+
     }
 
     public void quitToDesktop()

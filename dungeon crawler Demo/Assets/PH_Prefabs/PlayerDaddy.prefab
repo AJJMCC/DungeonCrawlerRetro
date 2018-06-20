@@ -223,9 +223,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 50
-  AttackCursor: {fileID: 0}
-  HandCursor: {fileID: 0}
+  AttackCursor: {fileID: 2800000, guid: 90aa309ec1f6d054ca8650049758d991, type: 3}
+  HandCursor: {fileID: 2800000, guid: 57ed801093daa96469b06ad51bc89822, type: 3}
   ItemCursor: {fileID: 0}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
+  WeaponActiveTime: 0
+  HandActiveTime: 0
+  chest: {fileID: 0}
 --- !u!114 &114463630146282138
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -239,20 +244,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirstHealthWarningPerventage: 0.7
   LowHealthWarningPercentage: 0.3
-  PhysRes: 0
-  MagiRes: 0
-  vitality: 0
-  resilience: 0
-  willpower: 0
-  reflexes: 0
-  strength: 0
-  cunning: 0
-  acuity: 0
-  intelligence: 0
-  augery: 0
-  lockpicking: 0
-  smithing: 0
-  brewing: 0
+  RealCurrenthealth: 100
+  RealMaxhealth: 100
+  CurrentSpells: 5
+  MaxSpells: 5
+  vitality: 1
+  resilience: 1
+  willpower: 1
+  reflexes: 1
+  strength: 1
+  cunning: 1
+  acuity: 1
+  intelligence: 1
+  augery: 1
+  lockpicking: 1
+  smithing: 1
+  brewing: 1
+  PhysRes: 100
+  MagiRes: 100
+  CritRes: 100
 --- !u!114 &114582624558097648
 MonoBehaviour:
   m_ObjectHideFlags: 1

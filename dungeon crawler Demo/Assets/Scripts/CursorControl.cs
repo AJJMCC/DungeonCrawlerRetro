@@ -12,9 +12,13 @@ public class CursorControl : MonoBehaviour {
     public Texture2D AttackCursor;
     public Texture2D HandCursor;
     public Sprite ItemCursor;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
 
-    bool WeaponActiveTime;
-    bool HandActiveTime;
+    public bool WeaponActiveTime;
+    public bool HandActiveTime;
+
+    public Animator chest;
 
 	// Use this for initialization
 	void Start ()
@@ -25,8 +29,12 @@ public class CursorControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        CheckForClicks();
+        
+    }
 
+    private void FixedUpdate()
+    {
+        CheckForClicks();
     }
 
     void CheckForClicks()
@@ -41,7 +49,7 @@ public class CursorControl : MonoBehaviour {
             }
 
             if (HandActiveTime)
-            {
+            {                
                 //create a ray cast and set it to the mouses cursor position in game
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
@@ -52,10 +60,18 @@ public class CursorControl : MonoBehaviour {
                     //log hit area to the console
                     Debug.Log(hit.collider);
 
+                    /*if (hit.collider.gameObject.tag == ("Chest"))
+                    {
+                        Debug.Log("Hit Chest");
+                        chest.SetBool("OpenChest", true);
+
+                    }
+                    else chest.SetBool("OpenChest", false);*/
+
                     if (hit.collider.gameObject.layer != 5)
-                        {
-                        ClickedOnSomething(hit.collider.gameObject);
-                        }
+                    {
+                        ClickedOnSomething(hit.collider.gameObject);                        
+                    }                    
                 }
             }
         }
@@ -74,7 +90,7 @@ public class CursorControl : MonoBehaviour {
 
     void ClickedOnSomething(GameObject something)
     {
-
+        
     }
 
 

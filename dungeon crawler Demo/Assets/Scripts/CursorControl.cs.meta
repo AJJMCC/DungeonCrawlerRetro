@@ -1,11 +1,12 @@
 fileFormatVersion: 2
 guid: cb858ce2d03166b468b7bbcd56a96f82
-timeCreated: 1528163127
-licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - AttackCursor: {instanceID: 0}
+  - HandCursor: {fileID: 2800000, guid: 57ed801093daa96469b06ad51bc89822, type: 3}
+  - ItemCursor: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
